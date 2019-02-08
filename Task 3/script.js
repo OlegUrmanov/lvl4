@@ -2,27 +2,29 @@ var odd = function(number) {
   return number % 2 === 1;
 }
 
+
 var even = function(number) {
-  return number % 2 === 0;
+  return number === 0 ? false : number % 2 === 0;
 }
 
 // TODO: filter for elimination 0 value
 var eliminateZero = function(number) {
-  return (number === 0); // your code
+  return (number === 0);
 }
 
-var everSecondTimer = 0; // my code
+var everSecondTimer = 0;
 // TODO: get every second element in sequence
-var everySecond = function(number) {
-  return even(++everSecondTimer); // your code
+var everySecond = function() {
+  return even(++everSecondTimer);
 }
+
 
 function filterArray(arr, filter) {
   var resultArray = [];
   for (i = 0; i < arr.length; i++) {
     if (filter(arr[i])) {
       // TODO: add filtered element in resultArray
-      resultArray.push(arr[i]); // your code
+      resultArray.push(arr[i]);
     }
   }
   return resultArray;
@@ -30,6 +32,13 @@ function filterArray(arr, filter) {
 
 var arr = [0, 1, 2, 3, 4, 0, 5];
 
-console.log(filterArray(arr, odd)); // [1, 3, 5]
-console.log(filterArray(arr, even)); // [2, 4]
-console.log(filterArray(arr, eliminateZero)); // [1, 2, 3, 4, 5]
+function _test() {
+
+  console.log(filterArray(arr, odd)); // [1, 3, 5]
+
+  console.log(filterArray(arr, even)); // [2, 4]
+
+  console.log(filterArray(arr, everySecond)); // [1, 3, 0]
+
+  console.log(filterArray(arr, eliminateZero)); // [1, 2, 3, 4, 5]
+}
