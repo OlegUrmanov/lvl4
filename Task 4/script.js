@@ -1,3 +1,8 @@
+/**
+ * Returns user profile object from given if it contains username and email
+ * @param  {Object} object - Object in which search will be carried out.
+ * @return {Object} Will return a new object with the fields username and email or an empty object.
+ */
 function getUserProfileFromObj(object) {
   if (typeof(object) === "object" && object != null) {
     if ((typeof object['username'] !== "undefined") && (typeof object['email'] !== "undefined")) {
