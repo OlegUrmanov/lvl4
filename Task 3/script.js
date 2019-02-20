@@ -1,24 +1,49 @@
+/**
+* Function defines not even number or even
+* @param  {number} number - The number variable has to be number.
+* @return {boolean} - Returns true if number not even
+*/
 var odd = function(number) {
   return number % 2 === 1;
 }
 
 
+/**
+* Function defines not even number or even
+* @param  {number} number - The number variable has to be number.
+* @return {boolean} - Returns true if number even
+*/
 var even = function(number) {
   return number === 0 ? false : number % 2 === 0;
 }
 
-// TODO: filter for elimination 0 value
+
+/**
+* Checks whether it is zero or not
+* @param  {number} number - The number variable has to be number.
+* @return {boolean} - Отсортированый массив
+*/
 var eliminateZero = function(number) {
   return (number === 0);
 }
 
 var everSecondTimer = 0;
-// TODO: get every second element in sequence
+
+
+/**
+* Receives every second element in the array.
+* @return {boolean} - Returns value of function on the counter 'everSecondTimer'
+*/
 var everySecond = function() {
   return even(++everSecondTimer);
 }
 
-
+/**
+* Filter array
+* @param  {Array} arr - The initial array.
+* @param  {function} filter - Parameter in which filtration will be carried out.
+* @return {Array} - Returned a sorted Array
+*/
 function filterArray(arr, filter) {
   var resultArray = [];
   for (i = 0; i < arr.length; i++) {
