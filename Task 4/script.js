@@ -1,7 +1,7 @@
 /**
  * Returns user profile object from given if it contains username and email
  * @param  {Object} object - Object in which search will be carried out.
- * @return {Object} Will return a new object with the fields username and email or an empty object.
+ * @return {Object} Will return a new object with the fields username and email or null.
  */
 function getUserProfileFromObj(object) {
   if (typeof(object) === "object" && object != null) {
@@ -12,7 +12,7 @@ function getUserProfileFromObj(object) {
       };
     }
   }
-  return false;
+  return null;
 }
 
 function _test() {
