@@ -1,3 +1,8 @@
+/**
+ * Places the elements of nested arrays in the parent array
+ * @param  {Array} source - The initial array from which we will receive 'number' in case it is the array.
+ * @return {boolean}
+ */
 function pulloutArray(source) {
   const array = [];
   for (let value of source.values()) {
@@ -20,5 +25,5 @@ function _test() {
 
   console.log("\npulloutArray([1, 2, [3,4, [123,2,11]], null, NaN, 't', ['teset'], 123])");
 
-  pulloutArray([1, 2, [3, 4, [123, 2, 11]], null, NaN, 't', ['teset'], 123])
+  pulloutArray([1, 2, [3,4, [123,2,11]], null, NaN, 't', ['teset'], 123])
 }
