@@ -1,7 +1,7 @@
 /**
 * Function defines not even number or even
 * @param  {number} number - The number variable has to be number.
-* @return {boolean} - Returns true if number not even
+* @return {number} - Returns number if number not even
 */
 var odd = function(number) {
   return number % 2 === 1;
@@ -11,7 +11,7 @@ var odd = function(number) {
 /**
 * Function defines not even number or even
 * @param  {number} number - The number variable has to be number.
-* @return {boolean} - Returns true if number even
+* @return {number} - Returns number if number even
 */
 var even = function(number) {
   return number === 0 ? false : number % 2 === 0;
@@ -21,13 +21,11 @@ var even = function(number) {
 /**
 * Checks whether it is zero or not
 * @param  {number} number - The number variable has to be number.
-* @return {boolean} - Отсортированый массив
+* @return {number} - Returns number if number === 0
 */
 var eliminateZero = function(number) {
   return (number === 0);
 }
-
-var everSecondTimer = 0;
 
 
 /**
@@ -42,7 +40,7 @@ var everySecond = function() {
 * Filter array
 * @param  {Array} arr - The initial array.
 * @param  {function} filter - Parameter in which filtration will be carried out.
-* @return {Array} - Returned a sorted Array
+* @return {Array} - Returned a filter Array
 */
 function filterArray(arr, filter) {
   var resultArray = [];
