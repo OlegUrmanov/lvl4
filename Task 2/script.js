@@ -1,7 +1,7 @@
 /**
  * Places the elements of nested arrays in the parent array
  * @param  {Array} source - The initial array from which we will receive 'number' in case it is the array.
- * @return {boolean}
+ * @return {Array} - Returns array which receive 'number' in case
  */
 function pulloutArray(source) {
   const array = [];
@@ -17,7 +17,7 @@ function pulloutArray(source) {
       array.push(value);
     }
   }
-  console.log(array);
+  return(array);
 }
 
 function _test() {
