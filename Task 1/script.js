@@ -3,5 +3,5 @@
  * @param object - any variable for dumping
  */
 function varDump(object) {
-console.log(object,typeof(object));
+return(object,typeof(object));
 }
